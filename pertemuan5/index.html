@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedai Kuliner Nusantara</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <h1>🍜 Kedai Kuliner</h1>
+            <p>Sajian Lezat & Nikmat</p>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Cari makanan & minuman...">
+        </div>
+        <button id="toggle-cart-btn">🛒 Keranjang (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <main class="container">
+        <section id="cart-panel" class="cart-panel">
+            <h2>Pesanan Anda</h2>
+            <div id="cart-items"></div>
+            <div class="cart-summary">
+                <p>Total Harga: <strong>Rp <span id="cart-total">0</span></strong></p>
+                <div class="cart-actions">
+                    <button id="clear-cart-btn" class="btn-danger">Kosongkan Keranjang</button>
+                    <button id="checkout-btn" class="btn-primary">Checkout Sekarang</button>
+                </div>
+            </div>
+            <div id="checkout-summary" class="checkout-summary" style="display: none;"></div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Menu Favorit</h2>
+            <div id="product-list" class="product-grid"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
